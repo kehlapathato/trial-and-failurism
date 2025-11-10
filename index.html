@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Music & Podcast</title>
+  <meta name="description" content="Producer • Podcaster • Creator — demo site" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <style>
+  body {
+    background: #007bff; /* Blue */
+    color: white;        /* White text */
+    font-family: Helvetica, Arial, sans-serif; /* Helvetica font */
+    margin: 0;
+  }
+
+  /* Make cards/buttons readable on blue background */
+  .track, .episode, .skills li, .social a {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .btn {
+    background: white;
+    color: #007bff;
+  }
+
+  .btn-ghost {
+    border: 1px solid white;
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">spazamann*</a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav">
+        ☰
+      </button>
+      <nav id="nav" class="nav">
+        <a href="#about">about</a>
+        <a href="#music">magazine</a>
+        <a href="#podcast">podcast</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <h1 id="hero-title">failure. podcaster.</h1>
+        <p class="tagline">thought to be professional about not getting it right,by trying.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#music">read the magazine</a>
+          <a class="btn btn-ghost" href="#podcast">latest episode</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>about</h2>
+      <p class="muted">hi — i’m <strong>spazamann*</strong>. i host a podcast called <em>trial and failureism</em>, and i learn by trying things badly, then better.</p>
+      <ul class="skills">
+        <li>editing and graphics</li>
+        <li>podcast hosting</li>
+        <li>screaming and hollering</li>
+      </ul>
+    </section>
+
+    <section id="magazine" class="section dark">
+      <div class="container">
+        <h2>magazine</h2>
+        <p class="muted">Recent tracks — click play to preview. Replace the sample files with your own.</p>
+
+        <div class="tracks-grid">
+          <div class="track">
+            <h3>Demo Track 1</h3>
+            <audio controls preload="none">
+              <source src="audio/sample1.mp3" type="audio/mpeg">
+            </audio>
+            <p class="small">Add streaming links here.</p>
+          </div>
+
+          <div class="track">
+            <h3>Demo Track 2</h3>
+            <audio controls preload="none">
+              <source src="audio/sample2.mp3" type="audio/mpeg">
+            </audio>
+            <p class="small">Description or credits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="podcast" class="section container">
+      <h2>Podcast — Trial and Failureism</h2>
+      <p class="muted">Episodes exploring the value of trying and failing. Embed your podcast RSS here.</p>
+
+      <div class="podcast-list">
+        <article class="episode">
+          <h4>Episode 1 — PILOT</h4>
+          <audio controls preload="none">
+            <source src="podcast/episode1.mp3" type="audio/mpeg">
+          </audio>
+          <p class="small">the start of things.</p>
+        </article>
+
+        <article class="episode">
+          <h4>Episode 2 — failureism in practice</h4>
+          <audio controls preload="none">
+            <source src="podcast/episode2.mp3" type="audio/mpeg">
+          </audio>
+          <p class="small">Notes and links.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section dark container">
+      <h2>Contact</h2>
+      <p class="muted">Booking, collabs, or just say hi.</p>
+
+      <form id="contact-form" class="contact-form" action="#" novalidate>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" id="name" required />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" id="email" required />
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea name="message" id="message" rows="4" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send</button>
+          <a class="btn btn-ghost" href="mailto:you@example.com?subject=Collab">Email directly</a>
+        </div>
+
+        <p id="form-status" class="small muted" aria-live="polite"></p>
+      </form>
+
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">SoundCloud</a>
+        <a href="#">Spotify</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> taf* — don't forget to try</small>
+      <nav class="footer-nav">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
